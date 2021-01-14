@@ -9,7 +9,7 @@ public class clothes {
 		String[] gender=new String[1];
 		
 		for(int d=0; d<name.length;d++) {
-			System.out.print("Enter name and age: ");
+			System.out.print("Enter name and gender: ");
 			name[d]= sc.next();
 			gender[d]=sc.next();
 		}

@@ -58,7 +58,7 @@ public static void main(String[] args) {
 			System.out.println("Item " + items);
 			
 			System.out.print("Enter brand: ");
-			branditem = input.next();
+			branditem = input.nextLine();
 			
 			System.out.print("Enter price: RM");
 			prices = input.nextDouble();

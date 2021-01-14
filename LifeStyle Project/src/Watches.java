@@ -51,7 +51,7 @@ public class Watches {
 		
 		Receipt(name , age , job, totalPriceToPaid);
 		
-		scan.close();
+		
 
 	}
 	public static void Interface() {
@@ -115,7 +115,7 @@ public class Watches {
 		}while(choice1[k]!=0);
 		System.out.println();
 		
-		scan.close();
+		
 		return quantity;
 		
 		}

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class project {
 
 	public static void main(String[] args) {
-		int choice;
+		int choices;
 		Scanner scan = new Scanner (System.in);
 		do {
 		System.out.println("Welcome ");
@@ -38,8 +38,8 @@ public class project {
 		}
 		
 		System.out.println("");
-		System.out.println("DO YOU WANT TO CONTINUE ? 1=YES 2=NO");
-		choice=scan.nextInt();
-		}while (choice==2);
+		System.out.println("DO YOU WANT TO RETURN TO THE MENU  ? 1=YES 2=NO");
+		choices=scan.nextInt();
+		}while (choices==1);
 	}
 }	
