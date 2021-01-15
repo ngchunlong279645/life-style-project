@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Shoe {
 	public static void main(String[] args) {
+		String[][] shoes= {{"Snearkers (1)","Hiking boots (2)","Basketball shoes(3)"},
+				{"30","50","70"}};
 		personalbackground();
-		productprovide();
+		productprovide(shoes);
 		afterservice();
 		
 
@@ -30,14 +32,12 @@ public class Shoe {
 		} System.out.println();	
 	}
 
-	public static void productprovide() {
+	public static void productprovide(String[][] shoes) {
 		Scanner in=new Scanner(System.in);
 		int j,k,l;
 		double sum,offer=0;
 		double total=0,discount=0;
 		System.out.println("3 types of product we provided: ");
-		String[][] shoes= {{"Snearkers (1)","Hiking boots (2)","Basketball shoes(3)"},
-							{"30","50","70"}};
 		System.out.println(shoes[0][0]+"       :RM"+shoes[1][0]);
 		System.out.println(shoes[0][1]+"    :RM"+shoes[1][1]);
 		System.out.println(shoes[0][2]+" :RM"+shoes[1][1]);
@@ -76,7 +76,7 @@ public class Shoe {
 				} System.out.println();
 			} else
 		if (shoe==2) {
-			System.out.print("How many pair of hikiing balls you want to order: ");
+			System.out.print("How many pair of hiking balls you want to order: ");
 			double q0=in.nextInt();
 				if (q0<=5) {
 					sum=(q0*k);

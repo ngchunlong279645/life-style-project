@@ -2,74 +2,73 @@ import java.util.Scanner;
 
 public class Pen {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
+		char next;
+		do {
+		System.out.println("!! WELCOME TO J SHOP !!");
+		System.out.println();
 		
-		System.out.println("!! CUSTOMER INFORMATION !!");
+		System.out.println("Dear Customer, please fill in your personal information.");
 		Scanner input = new Scanner(System .in);
 		
-		printName();
-		printIC();
-		printHP();
+		String[] information = new String [4];
+		System.out.print("Enter your name           : ");
+		information[0] = input.nextLine();
 		
-		System.out.println("-------------------------------");
-		System.out.println("!! HERE IS THE PRODUCTS AND THEIR DESCRIPTION !!");
-
+		System.out.print("Enter your No. IC         : ");
+		information[1] = input.next();
 		
-		String [][] pen = {{"Faber Castle", "Pilot G2", "Zhi Xin"},
-		                   {"ballpoint pen", "gel ball pen", "gel ink pen"},
-		                   {"blue", "black", "red"},
-		                   {"0.5 mm", "0.7 mm", "1.0 mm"},
-		                   {"RM1.31 / pcs", "RM3.40 / pcs", "RM 0.80 / pcs"}
-						};
+		System.out.print("Enter your No. H/P        : ");
+		information[2] = input.next();
 		
-		System.out.println("The brand of product: " + pen[0][0]);
-		System.out.println("The type of product: " + pen[1][0]);
-		System.out.println("The colour of product: " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
-		System.out.println("The witdh of product: " + pen[3][0] + " & " + pen[3][1]);
-		System.out.println("The price of product: " + pen[4][0]);
+		System.out.print("Enter your email address  : ");
+		information[3] = input.next();
+		
 		System.out.println();
 		
-		System.out.println("The brand of product: " + pen[0][1]);
-		System.out.println("The type of product: " + pen[1][1]);
-		System.out.println("The colour of product: " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
-		System.out.println("The witdh of product: " + pen[3][0] + " & " + pen[3][1] + " & " + pen[3][2]);
-		System.out.println("The price of product: " + pen[4][1]);
-		System.out.println();
+		Product();
 		
-		System.out.println("The brand of product: " + pen[0][2]);
-		System.out.println("The type of product: " + pen[1][2]);
-		System.out.println("The colour of product: " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
-		System.out.println("The witdh of product: " + pen[3][1]);
-		System.out.println("The price of product: " + pen[4][2]);
-		System.out.println();
-		
-		System.out.println("-------------------------------");
-		System.out.println("!! PURCHASED !!");
-		
-		int numberofitems, qty;
-		String branditem, colours, witdh;
-		double prices, ttlprice;
+		int numberofitems, qty, choose;
+		double prices = 0, ttlprice;
 		double amount = 0;
 		
-		System.out.print("Enter the number of item: ");
+		System.out.print("Enter the number of item you want to buy: ");
 		numberofitems = input.nextInt();
 		
 		for (int items = 1; items <= numberofitems; items++) {
 			System.out.println("Item " + items);
 			
-			System.out.print("Enter brand: ");
-			branditem = input.nextLine();
+			System.out.println("1 = Faber Castle ; 2 = Pilot G2 ; 3 = Zhi Xin ");
+			System.out.print("Choose the item ");
+			choose = input.nextInt();
 			
-			System.out.print("Enter price: RM");
-			prices = input.nextDouble();
+			if(choose == 1) {
+				System.out.println("Brand: Faber Castle");
+			}
+				
+				else if(choose == 2) {
+					System.out.println("Brand: Pilot G2");
+				}
 			
-			System.out.print("Enter colour: ");
-			colours = input.next();
+				else if(choose == 3) {
+					System.out.println("Brand: Zhi Xin");
+				}
 			
-			System.out.print("Enter witdh : ");
-			witdh = input.next();
+			switch(choose){
+				case 1:
+					prices = 1.31 ;
+					break;
+					
+				case 2:
+					prices = 3.40 ;
+					break;
+					
+				case 3:
+					prices = 0.80 ;
+					break;
+			}
 			
-			System.out.print("Enter quantity : ");
+			System.out.print("Enter quantity: ");
 			qty = input.nextInt();
 			
 			ttlprice = prices * qty;
@@ -85,43 +84,82 @@ public static void main(String[] args) {
 			discount =  amount * 5/100;
 		}
 		
-		else if(amount >= 50 && amount < 100) {
-			discount = amount * 10/100;
-		}
+			else if(amount >= 50 && amount < 100) {
+				discount = amount * 10/100;
+			}
 		
-		else if(amount >= 100) {
-			discount = amount * 15/100;
-		}
+			else if(amount >= 100) {
+				discount = amount * 15/100;
+			}
 		
-		System.out.println("Total amount of items : RM" + amount);
-		System.out.printf("Discount received: RM %.2f%n" , discount);
-		System.out.printf("Price to be paid: RM %.2f%n" , (amount - discount ));
+		int x=0;
+		while(x<=80) {
+			System.out.print("-");
+			x++;
+		}
+		System.out.println();
+		System.out.println("                         !! CUSTOMER INFORMATION !!"                              );
+		System.out.println("---------------------------------------------------------------------------------");
+		output(information);
+		
+		System.out.println("---------------------------------------------------------------------------------");
+		System.out.println("                               !! PURCHASED !!                                   ");
+		System.out.println("---------------------------------------------------------------------------------");
+		System.out.printf ("Total amount          : RM %.2f%n" , amount);
+		System.out.printf ("Discount received     : RM %.2f%n" , discount);
+		System.out.printf ("Price to be paid      : RM %.2f%n" , (amount - discount));
 		System.out.println();
 
-		System.out.println("THANK YOU AND COME AGAIN!!");
+		System.out.println("                       !!THANK YOU AND PLEASE COME AGAIN!!"                       );
+		System.out.print("Do You Want To Continue ?(Y)=yes (N)=no: ");
+	     
+		next = input.next().charAt(0);
+		}while(next=='y' || next=='Y');
+		
 	}
+	
+	public static void output (String[] input) {
+		
+		System.out.println("Name     :" + input[0]);
+		System.out.println("No. IC   :" + input[1]);
+		System.out.println("No H/P   :" + input[2]);
+		System.out.println("Email    :" + input[3]);
+		System.out.println();
+	}
+	
+	public static void Product() {
+		String[][] pen = {{"Faber Castle", "Pilot G2", "Zhi Xin"},
+						  {"ballpoint pen", "gel ball pen", "gel ink pen"},
+						  {"blue", "black", "red"},
+						  {"0.5 mm", "0.7 mm", "1.0 mm"},
+						  {"RM1.31 / pcs", "RM3.40 / pcs", "RM 0.80 / pcs"}
+				 		 };
 
-		public static void printName() {
-			Scanner input = new Scanner(System.in);
-		
-			System.out.print("Enter your name : ");
-			String name = input.nextLine();
-			System.out.println("Name :" + name);
+		System.out.println("---------------------------------------------------------------------------------");
+		System.out.println("            !! HERE IS OUR SHOP PRODUCTS AND THEIR DESCRIPTION !!");
+		System.out.println("---------------------------------------------------------------------------------");
+		System.out.println();
+
+		System.out.println("The brand of product  : " + pen[0][0]);
+		System.out.println("The type of product   : " + pen[1][0]);
+		System.out.println("The colour of product : " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
+		System.out.println("The witdh of product  : " + pen[3][0] + " & " + pen[3][1]);
+		System.out.println("The price of product  : " + pen[4][0]);
+		System.out.println();
+
+		System.out.println("The brand of product  : " + pen[0][1]);
+		System.out.println("The type of product   : " + pen[1][1]);
+		System.out.println("The colour of product : " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
+		System.out.println("The witdh of product  : " + pen[3][0] + " & " + pen[3][1] + " & " + pen[3][2]);
+		System.out.println("The price of product  : " + pen[4][1]);
+		System.out.println();
+
+		System.out.println("The brand of product  : " + pen[0][2]);
+		System.out.println("The type of product   : " + pen[1][2]);
+		System.out.println("The colour of product : " + pen[2][0] + " , " + pen[2][1] + " , " + pen[2][2]);
+		System.out.println("The witdh of product  : " + pen[3][1]);
+		System.out.println("The price of product  : " + pen[4][2]);
+		System.out.println();
 		}
 	
-		public static void printIC() {
-			Scanner input = new Scanner(System.in);
-		
-			System.out.print("Enter your No. IC : ");
-			String hp = input.next();
-			System.out.println("H/P : " + hp);
-		}
-	
-		public static void printHP() {
-			Scanner input = new Scanner(System.in);
-		
-			System.out.print("Enter your No. H/P : ");
-			String hp = input.next();
-			System.out.println("H/P : " + hp);
-		}
 }

@@ -2,16 +2,11 @@ import java.util.Scanner;
 
 public class Camera {
 	public static void main(String[] args) {
-		
 		char next;	
 // ITEM LIST	
-		
-		display();
-		
-// CALCULATION FOR ITEM 		
-		
-double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0,dis;
-
+		display();	
+		double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0,dis;
+//CALCULATION FOR ITEM 
 
 		do {
 			Scanner scan = new Scanner(System.in);
@@ -90,24 +85,26 @@ double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0
 	      
 // CALCULATION + BAG	
     
-		 System.out.println("Do You Want A Bag ? (Y)=yes (N)=no: ");
+		 System.out.print("Do You Want A Bag ? (Y)=yes (N)=no: ");
 	      char bag = scan.next().charAt(0);
 	      
 	      if((bag == 'Y') ||(bag == 'y')|| (bag == 'N')|| (bag == 'n')){
 	         if(bag =='Y'||(bag == 'y')){
 	            output= output +0.50;
-	            System.out.print(" Plastic bag or Paper bag? [ 1=plastic 2=paper ]: ");
+	            System.out.print("Plastic bag or Paper bag? [ 1=plastic 2=paper ]: ");
 	            char type = scan.next().charAt(0);
 	            if((type == '1') || (type == '2')){
 	               if(type == '1'){
 	            	   output = output + 0.10;
 	               System.out.printf("Total cash payment: RM%.2f",output);
-	               System.out.println("  THANK YOU AND PLEASE COME AGAIN!");
+	               System.out.println("");
+	               System.out.println("THANK YOU AND PLEASE COME AGAIN!");
 	               }
 	               else {
 	            	   output = output + 0.15;
 	               System.out.printf("Total cash payment: RM%.2f",output);
-	            System.out.println("  THANK YOU AND PLEASE COME AGAIN!");
+	               System.out.println("");
+	            System.out.println("THANK YOU AND PLEASE COME AGAIN!");
 	               }
 	            }
 	            else
@@ -115,7 +112,8 @@ double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0
 	         }
 	         else{
 	        	 System.out.printf("Total cash payment: RM%.2f",output);
-		            System.out.println("  THANK YOU NO PLASTIC BAG IS GOOD FOR NATURE!");
+	        	 System.out.println("");
+		            System.out.println("THANK YOU NO PLASTIC BAG IS GOOD FOR NATURE!");
 	         }
 	      }else  {
 	    	  System.out.println("Invalid Input Please try again! !");
@@ -123,51 +121,58 @@ double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0
 
 	     
 //continue			      
-	      System.out.println("  Do You Want To Continue ?(Y)=yes (N)=no: ");
+	      System.out.print("Do You Want To Continue ?(Y)=yes (N)=no: ");
 	     
 			next = scan.next().charAt(0);
 	}while(next=='y' || next=='Y');
 		
 		
-		 System.out.print("\n\nTHANK YOU AND PLEASE COME AGAIN!");
+		 System.out.println("THANK YOU AND PLEASE COME AGAIN!");
 		 
 } 
 
 
-public static void display() {
-String[][] product ={{"Fujifilm X-T4","Canon EOS R6","Nikon Z6 II"},
-				{"RM1500","RM2000","RM1750"}
-				};
-
-System.out.println("-------------------------------------");
-
-System.out.println("!!WELCOME TO LALAZA CAMERA SHOP!!");
-System.out.println("!!!!! BIG SALES !!!!! ");
-System.out.println("ITEM 1 ***"+product[0][0]+"-"+product[1][0]+"***");
-System.out.println("ITEM 2 ***"+product[0][1]+"-"+product[1][1]+"***");
-System.out.println("ITEM 3 ***"+product[0][2]+"-"+product[1][2]+"***");
-
-System.out.println("---------------------------------------");
-}
-
-
-public static void output(String[] input) {
-System.out.println("<------PERSONAL"+" "+"INFORMATION------>");
-
-System.out.println("Name = "+input[0]);
-System.out.println("Age = "+input[1]);
-System.out.println("City = "+input[2]);
-
-
-}
-
-
-
-
-
-
-
-
-}
+	public static void display() {
+	String[][] product ={{"Fujifilm X-T4","Canon EOS R6","Nikon Z6 II"},
+					{"RM1500","RM2000","RM1750"}
+					};
+	
+	System.out.println("-------------------------------------");
+	
+	System.out.println("!!WELCOME TO LALAZA CAMERA SHOP!!");
+	System.out.println("!!!!! BIG SALES !!!!! ");
+	System.out.println("ITEM 1 ***"+product[0][0]+"-"+product[1][0]+"***");
+	System.out.println("ITEM 2 ***"+product[0][1]+"-"+product[1][1]+"***");
+	System.out.println("ITEM 3 ***"+product[0][2]+"-"+product[1][2]+"***");
+	
+	System.out.println("---------------------------------------");
+	}
+	
+	
+	public static void output(String[] input) {
+		int x=0;
+		while(x<=39) {
+			System.out.print("-");
+			x++;
+		}
+		System.out.println();
+	System.out.println("<------PERSONAL"+" "+"INFORMATION------>");
+	System.out.println("----------------------------------------");
+	
+	System.out.println("Name = "+input[0]);
+	System.out.println("Age = "+input[1]);
+	System.out.println("City = "+input[2]);
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	}
 
 
