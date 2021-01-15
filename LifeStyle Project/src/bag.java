@@ -4,18 +4,18 @@ public class bag {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+        System.out.println("Welcome To Sogo Shop");
         Scanner sc=new Scanner (System.in);
-        printdata();
-        printhandbag();
-	}
-	
-	public static void printdata() {
-		Scanner sc=new Scanner (System.in);
 		String[] data= {"name","no"};
 		System.out.print("Please Enter Your Name:");
 		data[0]=sc.nextLine();
 		System.out.print("Please Enter Your Number Phone : ");
 		data[1]=sc.nextLine();
+		output(data);
+        printhandbag();
+	}
+	
+	public static void output (String[] data) {
 		System.out.println("Your data: ");
 		for (int a=0;a<data.length;a++)
 		System.out.println(data[a]);
@@ -23,7 +23,6 @@ public class bag {
 			System.out.print("*");
 		} System.out.println();	
 	}
-
 	
 	public static void printhandbag() {
 		Scanner sc=new Scanner (System.in);

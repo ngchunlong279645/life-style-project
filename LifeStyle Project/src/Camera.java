@@ -152,12 +152,15 @@ public class Camera {
 	public static void output(String[] input) {
 		int x=0;
 		while(x<=39) {
-			System.out.print("-");
+			System.out.print(">");
 			x++;
 		}
 		System.out.println();
-	System.out.println("<------PERSONAL"+" "+"INFORMATION------>");
-	System.out.println("----------------------------------------");
+		System.out.println("");
+	System.out.println("<---------PERSONAL"+" "+"INFORMATION--------->");
+	System.out.println("");
+	System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+	System.out.println("");
 	
 	System.out.println("Name = "+input[0]);
 	System.out.println("Age = "+input[1]);
