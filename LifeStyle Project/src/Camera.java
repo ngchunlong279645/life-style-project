@@ -111,7 +111,7 @@ public class Camera {
 	            else
 	            System.out.print("Invalid Input Please try again!");
 	         }
-	         else{
+	         else if(bag =='N'||(bag == 'n')){
 	        	 System.out.printf("Total cash payment: RM%.2f",output);
 	        	 System.out.println("");
 		            System.out.println("THANK YOU NO PLASTIC BAG IS GOOD FOR NATURE!");
