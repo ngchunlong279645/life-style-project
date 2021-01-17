@@ -6,7 +6,7 @@ public class project {
 		char choices;
 		Scanner scan = new Scanner (System.in);
 		do {
-		System.out.println("Welcome ");
+		System.out.println("^#^  ^~^  Welcome To Group 6 MegaMall ^.^  ^_^   ");
 		
 		System.out.println("1=Camera 2=Shoe 3=Watches 4=Pen 5=Clothes 6=Bag");
 		System.out.print("Please choose your service :");

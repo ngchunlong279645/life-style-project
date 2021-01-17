@@ -5,10 +5,11 @@ public class Camera {
 		char next;	
 // ITEM LIST	
 		display();	
-		double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0,dis;
+		
 //CALCULATION FOR ITEM 
 
 		do {
+			double total,output,price1,price2=0,price3 = 0,quantity1,quantity2=0,quantity3=0,dis;
 			Scanner scan = new Scanner(System.in);
 			String[] info = new String[3];
 			System.out.print("Enter Your Name : ");

@@ -40,7 +40,7 @@ public class Shoe {
 		System.out.println("3 types of product we provided: ");
 		System.out.println(shoes[0][0]+"       :RM"+shoes[1][0]);
 		System.out.println(shoes[0][1]+"    :RM"+shoes[1][1]);
-		System.out.println(shoes[0][2]+" :RM"+shoes[1][1]);
+		System.out.println(shoes[0][2]+" :RM"+shoes[1][2]);
 		j=Integer.parseInt(shoes[1][0]);
 		k=Integer.parseInt(shoes[1][1]);
 		l=Integer.parseInt(shoes[1][2]);
