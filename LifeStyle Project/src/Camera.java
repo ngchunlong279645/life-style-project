@@ -67,7 +67,7 @@ public class Camera {
 		output = total -dis;
 		System.out.println();
 		//System.out.println("Thank You "+name+ " , "+age+" years old from "+city);
-		output(info);
+		personal(info);
 		
 		System.out.printf("Total price : RM%.2f%n",total);
 		System.out.printf("Discount received : RM%.2f%n",dis);
@@ -150,7 +150,7 @@ public class Camera {
 	}
 	
 	
-	public static void output(String[] input) {
+	public static void personal(String[] input) {
 		int x=0;
 		while(x<=39) {
 			System.out.print(">");
