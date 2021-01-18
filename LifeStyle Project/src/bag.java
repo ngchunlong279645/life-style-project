@@ -6,6 +6,7 @@ public class bag {
 		// TODO Auto-generated method stub
         
         Scanner sc=new Scanner (System.in);
+        System.out.println("^#^  ^~^  Welcome To Sogo ^.^  ^_^   ");
 		String[] data= {"name","no"};
 		System.out.print("Please Enter Your Name:");
 		data[0]=sc.nextLine();
