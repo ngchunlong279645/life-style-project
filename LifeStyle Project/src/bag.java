@@ -4,7 +4,7 @@ public class bag {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        System.out.println("Welcome To Sogo Shop");
+        
         Scanner sc=new Scanner (System.in);
 		String[] data= {"name","no"};
 		System.out.print("Please Enter Your Name:");
@@ -129,7 +129,7 @@ public class bag {
 	            for (int c=1; c<=louis1.length ; c=c+1) {
 	         			total3 = louisvouitton + total3;
 	           			total6=total6+1;
-	           			j=j-1;
+	           			k=k-1;
 	          	}
 	            System.out.println();
 	    	    System.out.print("More Handbag (Y/N)?: ");

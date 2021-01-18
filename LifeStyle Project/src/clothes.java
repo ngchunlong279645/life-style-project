@@ -48,37 +48,37 @@ public class clothes {
 		total = 10;
 		System.out.println("You had purchase 1 T-shirts -Shirt " +"\n" + "The total is RM10");
 	} else if (code == 1 && quantity == 2) {
-		total = 20;
+		total = 10*2; 
 		System.out.println( "You had purchase 2 T-shirts -Shirt" +"\n" + "The total is RM20");
 	} else if (code == 2 && quantity == 1) {
 		total = 20;
 		System.out.println("You had purchase  1 Shortpants -Pants" +"\n" + "The total is RM20");
 	} else if (code == 2 && quantity == 2){
-		total = 40;
+		total = 20*2;
 		System.out.println("You had purchase 2 Shortpants -Pants" +"\n" + "The total is RM40");
 	} else if (code == 3 && quantity == 1){
 		total = 30;
 		System.out.println("You had purchase 1 Jackets -Outerwear" +"\n" + "The total is RM30");
 	} else if (code == 3 && quantity == 2) {
-		total = 60;
+		total = 30*2;
 		System.out.println("You had purchase  2 Jackets -Outerwear" +"\n" + "The total is RM60");
 	} else if (code == 4 && quantity == 1) {
 		total = 10;
 		System.out.println("You had purchase 1 Blouse -Shirt" +"\n" + "The total is RM10");
 	} else if (code == 4 && quantity == 2) {
-		total = 20;
+		total = 10*2;
 		System.out.println("You had purchase 2 Blouse -Shirt" +"\n" + "The total is RM20");
 	} else if (code == 5 && quantity == 1) {
 		total = 20;
 		System.out.println("You had purchase 1 Skirts -Pants" +"\n" + "The total is RM20");
 	} else if (code == 5 && quantity == 2) {
-		total = 40;
+		total = 20*2;
 		System.out.println("You had purchase 2 Skirts -Pants" +"\n" + "The total is RM40");
 	} else if (code == 6 && quantity == 1) {
 		total = 30;
 		System.out.println("You had purchase 1 Hoodie -Outerwear" +"\n" + "The total is RM30");
 	} else if (code == 6 && quantity == 2){
-		total = 60;
+		total = 30*2;
 		System.out.println("You had purchase 2 Hoodie -Outerwear" +"\n" + "The total is RM60");
 	} else {
 		System.out.println("Invalid code!");
